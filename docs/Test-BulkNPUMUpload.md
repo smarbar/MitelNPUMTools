@@ -50,3 +50,7 @@ A folder called Greetings needs to be created on the C Drive of your computer an
 A CSV file named mbs.csv also needs to be placed here
 
 ## RELATED LINKS
+
+[[https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs/Connect-Tdr.md](https://github.com/smarbar/MitelNPUMTools/tree/main/docs/Test-BulkNPUMUpload.md)
+[https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs](https://github.com/smarbar/MitelNPUMTools/tree/main/docs)]()
+

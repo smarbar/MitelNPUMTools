@@ -64,8 +64,12 @@
     </command:examples>
     <command:relatedLinks>
       <maml:navigationLink>
-        <maml:linkText>Posh-SSH</maml:linkText>
-        <maml:uri></maml:uri>
+        <maml:linkText>[https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs/Connect-Tdr.md</maml:linkText>
+        <maml:uri>https://github.com/smarbar/MitelNPUMTools/tree/main/docs/Set-BulkNPUMMailboxGreeting.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs</maml:linkText>
+        <maml:uri>https://github.com/smarbar/MitelNPUMTools/tree/main/docs)](</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
@@ -132,8 +136,12 @@
     </command:examples>
     <command:relatedLinks>
       <maml:navigationLink>
-        <maml:linkText>Posh-SSH</maml:linkText>
-        <maml:uri></maml:uri>
+        <maml:linkText>[https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs/Connect-Tdr.md</maml:linkText>
+        <maml:uri>https://github.com/smarbar/MitelNPUMTools/tree/main/docs/Set-NPUMMailboxGreeting.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs</maml:linkText>
+        <maml:uri>https://github.com/smarbar/MitelNPUMTools/tree/main/docs)](</maml:uri>
       </maml:navigationLink>
     </command:relatedLinks>
   </command:command>
@@ -173,6 +181,15 @@
         </dev:remarks>
       </command:example>
     </command:examples>
-    <command:relatedLinks />
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>[https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs/Connect-Tdr.md</maml:linkText>
+        <maml:uri>https://github.com/smarbar/MitelNPUMTools/tree/main/docs/Test-BulkNPUMUpload.md</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs</maml:linkText>
+        <maml:uri>https://github.com/smarbar/MitelNPUMTools/tree/main/docs)](</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
   </command:command>
 </helpItems>

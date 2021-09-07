@@ -1,32 +1,4 @@
 Function Set-NPUMMailboxGreeting {
-    <#
-    .SYNOPSIS
-    Uploads and activates Mitel NuPoint voicemail greetings on individual mailboxes
-    
-    .DESCRIPTION
-    The Set-NPUMMailboxGreeting cmdlet will upload all wav files in the C:\Greetings folder and request the mailbox number to activate it on.
-
-    The Posh-SSH module must be installed. To do this on Powershell v4 and above run the following command 'install-module -Name Posh-SSH'
-
-    Greetings must be in the below format. 
-    CCITT u-law, 8KHz, 8 bit, mono.
-
-    .PARAMETER ComputerName
-    FQDN or IP Address of MSL server to create connection
-
-    .EXAMPLE
-    Set-NPUMMailBoxGreeting 192.168.1.10
-
-    .NOTES
-    A folder called Greetings needs to be created on the C Drive of your computer and the properly formated WAV files placed in here for upload. The upload
-    procedure will also delete these files so make sure they are a copy and orginial placed somewhere for safe keeping.
-    You will be prompted for the mailbox number for each file as it is being uploaded.
-    SSH must be enabled on the MSL server.
-
-    .Link
-    Posh-SSH
-
-    #>
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True, HelpMessage="FQDN or IP Address of MSL Server")]

@@ -1,39 +1,4 @@
 Function Set-BulkNPUMMailboxGreeting {
-    <#
-    .SYNOPSIS
-    Bulk upload, import and activation of Mitel NuPoint voicemail greetings
-
-    .DESCRIPTION
-    The Set-BulkNPUMMailboxGreeting cmdlet will upload all wav files in the C:\Greetings folder and use the mbs.csv to activate each against the correct mailbox.
-
-    The Posh-SSH module must be installed. To do this on Powershell v4 and above run the following command 'install-module -Name Posh-SSH'
-
-    Greetings must be in the below format. 
-    CCITT u-law, 8KHz, 8 bit, mono.
-
-    A csv file named mbs.csv needs to be stored in the C:\Greetings folder along with the greetings. The csv needs to have two columns, one named 'Mailbox' and the other 'File'
-    Mailbox is the mailbox number for the user and file is the file name of the new greeting.
-    e.g.
-    Mailbox | File
-    ========|========
-    1460    | 1460_John.wav
-    1678    | Jim1678.wav
-
-    .PARAMETER ComputerName
-    FQDN or IP Address of MSL server to create connection
-
-    .EXAMPLE
-    Set-BulkNPUMMailboxGreeting 192.168.1.10
-
-    .NOTES
-    A folder called Greetings needs to be created on the C Drive of your computer and the properly formated WAV files placed in here for upload. The upload
-    procedure will also delete these files so make sure they are a copy and orginial placed somewhere for safe keeping.
-    SSH must be enabled on the MSL server.
-
-    .Link
-    Posh-SSH
-
-    #>
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True, HelpMessage="FQDN or IP Address of MSL Server")]
@@ -93,34 +58,6 @@ Function Set-BulkNPUMMailboxGreeting {
     Remove-SshSession -Index 0
 }
 Function Set-NPUMMailboxGreeting {
-    <#
-    .SYNOPSIS
-    Uploads and activates Mitel NuPoint voicemail greetings on individual mailboxes
-    
-    .DESCRIPTION
-    The Set-NPUMMailboxGreeting cmdlet will upload all wav files in the C:\Greetings folder and request the mailbox number to activate it on.
-
-    The Posh-SSH module must be installed. To do this on Powershell v4 and above run the following command 'install-module -Name Posh-SSH'
-
-    Greetings must be in the below format. 
-    CCITT u-law, 8KHz, 8 bit, mono.
-
-    .PARAMETER ComputerName
-    FQDN or IP Address of MSL server to create connection
-
-    .EXAMPLE
-    Set-NPUMMailBoxGreeting 192.168.1.10
-
-    .NOTES
-    A folder called Greetings needs to be created on the C Drive of your computer and the properly formated WAV files placed in here for upload. The upload
-    procedure will also delete these files so make sure they are a copy and orginial placed somewhere for safe keeping.
-    You will be prompted for the mailbox number for each file as it is being uploaded.
-    SSH must be enabled on the MSL server.
-
-    .Link
-    Posh-SSH
-
-    #>
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory=$True, HelpMessage="FQDN or IP Address of MSL Server")]
@@ -168,31 +105,6 @@ Function Set-NPUMMailboxGreeting {
     Remove-SshSession -Index 0
 }
 function Test-BulkNPUMUpload {
-    <#
-    .SYNOPSIS
-    Tests the audio files specified in the CSV exists and are available for upload
-
-    .DESCRIPTION
-    The Test-BulkNPUM cmdlet will test that the audio files specified in the CSV exists and are available for upload.
-
-    Greetings must be in the below format. 
-    CCITT u-law, 8KHz, 8 bit, mono.
-
-    A csv file named mbs.csv needs to be stored in the C:\Greetings folder along with the greetings. The csv needs to have two columns, one named 'Mailbox' and the other 'File'
-    Mailbox is the mailbox number for the user and file is the file name of the new greeting. Please ensure there are no spaces in the audio filename, this will be highlighted in the test results.
-    e.g.
-    Mailbox | File
-    ========|========
-    1460    | 1460_John.wav
-    1678    | Jim1678.wav
-
-    .EXAMPLE
-    Test-BulkNPUMCSVFile
-
-    .NOTES
-    A folder called Greetings needs to be created on the C Drive of your computer and the properly formated WAV files placed in here for upload. A CSV file named mbs.csv also needs to be placed here 
-
-    #>
     $FilePath = "C:\Greetings"
     $csvImport = Import-Csv $FilePath\mbs.csv
     foreach ($item in $csvImport) {
