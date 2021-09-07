@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<helpItems schema="maml" xmlns="http://msh">
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Set-BulkNPUMMailboxGreeting</command:name>
+      <command:verb>Set</command:verb>
+      <command:noun>BulkNPUMMailboxGreeting</command:noun>
+      <maml:description>
+        <maml:para>Bulk upload, import and activation of Mitel NuPoint voicemail greetings</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The Set-BulkNPUMMailboxGreeting cmdlet will upload all wav files in the C:\Greetings folder and use the mbs.csv to activate each against the correct mailbox.</maml:para>
+      <maml:para>The Posh-SSH module must be installed. To do this on Powershell v4 and above run the following command 'install-module -Name Posh-SSH'</maml:para>
+      <maml:para>Greetings must be in the below format.  CCITT u-law, 8KHz, 8 bit, mono.</maml:para>
+      <maml:para>A csv file named mbs.csv needs to be stored in the C:\Greetings folder along with the greetings. The csv needs to have two columns, one named 'Mailbox' and the other 'File' Mailbox is the mailbox number for the user and file is the file name of the new greeting. e.g. Mailbox | File ========|======== 1460    | 1460_John.wav 1678    | Jim1678.wav</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Set-BulkNPUMMailboxGreeting</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="ComputerName, Host, IPAddress">
+          <maml:name>MSLServer</maml:name>
+          <maml:description>
+            <maml:para>FQDN or IP Address of MSL Server</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="ComputerName, Host, IPAddress">
+        <maml:name>MSLServer</maml:name>
+        <maml:description>
+          <maml:para>FQDN or IP Address of MSL Server</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>A folder called Greetings needs to be created on the C Drive of your computer and the properly formated WAV files placed in here for upload. The upload procedure will also delete these files so make sure they are a copy and orginial placed somewhere for safe keeping. SSH must be enabled on the MSL server.</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>Set-BulkNPUMMailboxGreeting 192.168.1.10</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Posh-SSH</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Set-NPUMMailboxGreeting</command:name>
+      <command:verb>Set</command:verb>
+      <command:noun>NPUMMailboxGreeting</command:noun>
+      <maml:description>
+        <maml:para>Uploads and activates Mitel NuPoint voicemail greetings on individual mailboxes</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The Set-NPUMMailboxGreeting cmdlet will upload all wav files in the C:\Greetings folder and request the mailbox number to activate it on.</maml:para>
+      <maml:para>The Posh-SSH module must be installed. To do this on Powershell v4 and above run the following command 'install-module -Name Posh-SSH'</maml:para>
+      <maml:para>Greetings must be in the below format.  CCITT u-law, 8KHz, 8 bit, mono.</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Set-NPUMMailboxGreeting</maml:name>
+        <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="ComputerName, Host, IPAddress">
+          <maml:name>MSLServer</maml:name>
+          <maml:description>
+            <maml:para>FQDN or IP Address of MSL Server</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+          <dev:type>
+            <maml:name>String</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="ComputerName, Host, IPAddress">
+        <maml:name>MSLServer</maml:name>
+        <maml:description>
+          <maml:para>FQDN or IP Address of MSL Server</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
+        <dev:type>
+          <maml:name>String</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>A folder called Greetings needs to be created on the C Drive of your computer and the properly formated WAV files placed in here for upload. The upload procedure will also delete these files so make sure they are a copy and orginial placed somewhere for safe keeping. You will be prompted for the mailbox number for each file as it is being uploaded. SSH must be enabled on the MSL server.</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>Set-NPUMMailBoxGreeting 192.168.1.10</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Posh-SSH</maml:linkText>
+        <maml:uri></maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+    <command:details>
+      <command:name>Test-BulkNPUMUpload</command:name>
+      <command:verb>Test</command:verb>
+      <command:noun>BulkNPUMUpload</command:noun>
+      <maml:description>
+        <maml:para>Tests the audio files specified in the CSV exists and are available for upload</maml:para>
+      </maml:description>
+    </command:details>
+    <maml:description>
+      <maml:para>The Test-BulkNPUM cmdlet will test that the audio files specified in the CSV exists and are available for upload.</maml:para>
+      <maml:para>Greetings must be in the below format.  CCITT u-law, 8KHz, 8 bit, mono.</maml:para>
+      <maml:para>A csv file named mbs.csv needs to be stored in the C:\Greetings folder along with the greetings. The csv needs to have two columns, one named 'Mailbox' and the other 'File' Mailbox is the mailbox number for the user and file is the file name of the new greeting. Please ensure there are no spaces in the audio filename, this will be highlighted in the test results. e.g. Mailbox | File ========|======== 1460    | 1460_John.wav 1678    | Jim1678.wav</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Test-BulkNPUMUpload</maml:name>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters />
+    <command:inputTypes />
+    <command:returnValues />
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>A folder called Greetings needs to be created on the C Drive of your computer and the properly formated WAV files placed in here for upload. A CSV file named mbs.csv also needs to be placed here</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+        <dev:code>Test-BulkNPUMCSVFile</dev:code>
+        <dev:remarks>
+          <maml:para></maml:para>
+        </dev:remarks>
+      </command:example>
+    </command:examples>
+    <command:relatedLinks />
+  </command:command>
+</helpItems>
