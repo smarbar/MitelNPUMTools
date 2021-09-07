@@ -30,7 +30,7 @@ The csv needs to have two columns, one named 'Mailbox' and the other 'File'
 Mailbox is the mailbox number for the user and file is the file name of the new greeting.
 e.g.
 Mailbox | File
---------|----------
+========|========
 1460    | 1460_John.wav
 1678    | Jim1678.wav
 
