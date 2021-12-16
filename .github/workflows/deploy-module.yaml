@@ -4,7 +4,7 @@ name: deploy-mitelnpumtools
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
         uses: PaulHatch/semantic-version@v4.0.2
         with:
           change_path: ./client
-          branch: master
+          branch: main
           tag_prefix: "v"
           major_pattern: "(MAJOR))"
           minor_pattern: "(MINOR)"
@@ -30,3 +30,12 @@ jobs:
           GALLERY_API_KEY: ${{ secrets.GALLERY_API_KEY }}
         shell: powershell
         run: .\Build.ps1 -Task All -Version ${{ steps.versioning.outputs.version }}
+      # - name: Create Release
+      #   if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.github_token }}
+      #   with:
+      #     tag_name: ${{ steps.versioning.outputs.version }}
+      #     release_name: ${{ steps.versioning.outputs.version }}
+      #     prerelease: true   
