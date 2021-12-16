@@ -2,10 +2,10 @@
 Mitel NPUM Voicemail Tools
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/smarbar/MitelNPUMTools/blob/main/LICENSE)
-[![Documentation - GitHub](https://img.shields.io/badge/Documentation-TeamsFunctions-blue.svg)](https://github.com/smarbar/MitelNPUMTools/tree/master/docs)
-[![PowerShell Gallery - TeamsFunctions](https://img.shields.io/badge/PowerShell%20Gallery-TeamsFunctions-blue.svg)](https://www.powershellgallery.com/packages/MitelNPUMTools)
+[![Documentation - GitHub](https://img.shields.io/badge/Documentation-MitelNPUMTools-blue.svg)](https://github.com/smarbar/MitelNPUMTools/tree/master/docs)
+[![PowerShell Gallery - MitelNPUMTools](https://img.shields.io/badge/PowerShell%20Gallery-MitelNPUMTools-blue.svg)](https://www.powershellgallery.com/packages/MitelNPUMTools)
 [![Minimum Supported PowerShell Version](https://img.shields.io/badge/PowerShell-5.1-blue.svg)](https://github.com/smarbar/MitelNPUMTools)
-[![Build Status](https://smarbar.visualstudio.com/MitelNPUMTools/_apis/build/status/MitelNPUMTools-CI?branchName=master)](https://smarbar.visualstudio.com/MitelNPUMTools/_build/latest?definitionId=3&branchName=master)
+[![deploy-mitelnpumtools](https://github.com/smarbar/MitelNPUMTools/actions/workflows/deploy-module.yaml/badge.svg)](https://github.com/smarbar/MitelNPUMTools/actions/workflows/deploy-module.yaml)
 <a href="https://www.repostatus.org/#active"><img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed." /></a>
 
 ## Overview
