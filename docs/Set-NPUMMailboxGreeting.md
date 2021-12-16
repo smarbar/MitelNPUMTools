@@ -63,6 +63,6 @@ SSH must be enabled on the MSL server.
 
 ## RELATED LINKS
 
-[[https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs/Connect-Tdr.md](https://github.com/smarbar/MitelNPUMTools/tree/main/docs/Set-NPUMMailboxGreeting.md)
+[https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs/Connect-Tdr.md](https://github.com/smarbar/MitelNPUMTools/tree/main/docs/Set-NPUMMailboxGreeting.md)
 [https://github.com/smarbar/MSTeamsDirectRouting/tree/main/docs](https://github.com/smarbar/MitelNPUMTools/tree/main/docs)
 
