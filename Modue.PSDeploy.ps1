@@ -3,7 +3,7 @@ Deploy Module {
       FromSource Build\MitelNPUMTools
       To PSGallery
       WithOptions @{
-          ApiKey = $(PSGallery)
+        ApiKey = $ENV:GALLERY_API_KEY
       }
   }
 }

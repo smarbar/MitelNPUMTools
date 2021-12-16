@@ -1,10 +1,16 @@
+[cmdletbinding()]
+param(
+    [version]$Version = '0.0.1'
+)
+
 $srcPath = "$PSScriptRoot\src"
 $buildPath = "$PSScriptRoot\build"
 $docPath = "$PSScriptRoot\docs"
 $moduleName = "MitelNPUMTools"
 $modulePath = "$buildPath\$moduleName"
 $author = 'Scott Barrett'
-$version = '1.4.0'
+
+$Version
 
 task Clean {
     If(Get-Module $moduleName){
@@ -36,11 +42,11 @@ task ModuleBuild Clean, DocBuild, {
         Path = "$modulePath\$moduleName.psd1"
         FunctionsToExport = $pubFiles.BaseName
         RootModule = "$moduleName.psm1"
-        ModuleVersion = $version
+        ModuleVersion = $Version
         ProjectUri = "https://github.com/smarbar/$modulename"
     }
     Update-ModuleManifest @moduleManifestData
-    Import-Module $modulePath -RequiredVersion $version
+    Import-Module $modulePath -RequiredVersion $Version
 }
 
 task Publish {
