@@ -5,7 +5,7 @@ Mitel NPUM Voicemail Tools
 [![Documentation - GitHub](https://img.shields.io/badge/Documentation-MitelNPUMTools-blue.svg)](https://github.com/smarbar/MitelNPUMTools/tree/master/docs)
 [![PowerShell Gallery - MitelNPUMTools](https://img.shields.io/badge/PowerShell%20Gallery-MitelNPUMTools-blue.svg)](https://www.powershellgallery.com/packages/MitelNPUMTools)
 [![Minimum Supported PowerShell Version](https://img.shields.io/badge/PowerShell-5.1-blue.svg)](https://github.com/smarbar/MitelNPUMTools)
-[![deploy-mitelnpumtools](https://github.com/smarbar/MitelNPUMTools/actions/workflows/deploy-module.yaml/badge.svg)](https://github.com/smarbar/MitelNPUMTools/actions/workflows/deploy-module.yaml)
+[![Build](https://github.com/smarbar/MitelNPUMTools/actions/workflows/deploy-module.yaml/badge.svg)](https://github.com/smarbar/MitelNPUMTools/actions/workflows/deploy-module.yaml)
 <a href="https://www.repostatus.org/#active"><img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed." /></a>
 
 ## Overview

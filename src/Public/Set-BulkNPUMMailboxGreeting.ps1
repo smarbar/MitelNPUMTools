@@ -6,6 +6,10 @@ Function Set-BulkNPUMMailboxGreeting {
         [string]$MSLServer
     )
 
+    # test ssh module installed
+    # test greetings folder exists
+    # test greetings folder has wav files present
+
     If (!(Get-Module -ListAvailable Posh-SSH)) {
         Write-Output "You must install the Posh-SSH module before you can continue"
         Write-Output "Y Install Posh-SSH"

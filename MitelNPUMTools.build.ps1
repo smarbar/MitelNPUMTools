@@ -27,10 +27,11 @@ task DocBuild {
 
 task ModuleBuild Clean, DocBuild, {
     $pubFiles = Get-ChildItem "$srcPath\public" -Filter *.ps1 -File -Recurse
+    $privFiles = Get-ChildItem "$srcPath\public" -Filter *.ps1 -File -Recurse
     If(-not(Test-Path $modulePath)){
         New-Item $modulePath -ItemType Directory
     }
-    ForEach($file in ($pubFiles)) {
+    ForEach($file in ($pubFiles + $privFiles)) {
         Get-Content $file.FullName | Out-File "$modulePath\$moduleName.psm1" -Append -Encoding utf8
     }
     Copy-Item "$srcPath\$moduleName.psd1" -Destination $modulePath
