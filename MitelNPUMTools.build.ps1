@@ -27,7 +27,7 @@ task DocBuild {
 
 task ModuleBuild Clean, DocBuild, {
     $pubFiles = Get-ChildItem "$srcPath\public" -Filter *.ps1 -File -Recurse
-    $privFiles = Get-ChildItem "$srcPath\private" -Filter *.ps1 -File
+    # $privFiles = Get-ChildItem "$srcPath\private" -Filter *.ps1 -File
     If(-not(Test-Path $modulePath)){
         New-Item $modulePath -ItemType Directory
     }
