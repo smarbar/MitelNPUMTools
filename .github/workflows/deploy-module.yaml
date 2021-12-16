@@ -20,7 +20,7 @@ jobs:
         with:
           change_path: ./client
           branch: master
-          # tag_prefix: "v"
+          tag_prefix: "v"
           major_pattern: "(MAJOR))"
           minor_pattern: "(MINOR)"
           format: "${major}.${minor}.${patch}"
